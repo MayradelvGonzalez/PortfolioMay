@@ -72,7 +72,7 @@ const EducationSection = () => {
             <h3 className="text-xl font-bold text-green-700 mb-6">Educación Formal</h3>
             <div className="space-y-6">
               {education.map((item, index) => (
-                <div key={index} className="border-l-4 border-green-500 pl-6 py-2" style={{ backgroundColor: '#c3c7c4' }}>
+                <div key={index} className="border-l-8 border-green-500 pl-6 py-2" style={{ backgroundColor: '#c3c7c4' }}>
                   <h4 className="font-bold text-green-800">{item.title}</h4>
                   <p className="text-black-600">{item.institution}</p>
                   <p className="text-sm text-black-500">{item.period}</p>
@@ -85,7 +85,7 @@ const EducationSection = () => {
             <h3 className="text-xl font-bold text-green-700 mb-6">Cursos y Certificaciones</h3>
             <div className="space-y-6">
               {courses.map((item, index) => (
-                <div key={index} className="border-l-4 border-green-300 pl-6 py-2" style={{ backgroundColor: '#c3c7c4' }}>
+                <div key={index} className="border-l-8 border-green-500 pl-6 py-2" style={{ backgroundColor: '#c3c7c4' }}>
                   <h4 className="font-bold text-green-800">{item.title}</h4>
                   <p className="text-black-600">{item.institution}</p>
                   <p className="text-sm text-black-500">{item.period}</p>

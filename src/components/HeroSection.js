@@ -16,7 +16,7 @@ const HeroSection = ({ scrollToContact }) => {
     >
       <div className="flex flex-col md:flex-row items-center justify-center max-w-5xl" 
 
-      style={{ backgroundColor: 'lightgray', padding: '86px', borderRadius: '20px' }} // 
+      style={{ backgroundColor: 'lightgray', padding: '120px', borderRadius: '20px 70px', border: '1px black solid'}} // 
       
       >
         {/* Imagen a la izquierda (se mostrará en la parte superior en pantallas pequeñas) */}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import wspIcon from '../whatsapp.png';
 const ContactSection = React.forwardRef((_, ref) => {
   const [formData, setFormData] = useState({ name: '', message: '' });
   const [messageSent, setMessageSent] = useState(false);
@@ -61,21 +61,21 @@ const ContactSection = React.forwardRef((_, ref) => {
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              className="w-full text-black font-bold py-3 px-6 rounded-lg transition duration-300 hover:text- hover:bg-[#FFC107]"
-              style={{ backgroundColor: '#5d7c66' }}
-            >
-              Enviar mensaje por WhatsApp <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" className="inline-block w-5 h-5 ml-2" />
-            </button>
+           <button
+  type="submit"
+  className="w-full text-black font-bold py-3 px-6 rounded-lg transition duration-300 hover:bg-red hover:text-green-800"
+  style={{ backgroundColor: '#c3c7c4', border: '1px solid black' }}
+>
+  Enviar mensaje por WhatsApp <img src={wspIcon} alt="WhatsApp" className="inline-block w-5 h-5 ml-2" />
+</button>
           </form>
 
           {messageSent && (
-            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
-              <div className="bg-white p-6 rounded-md shadow-lg text-center">
-                <p className="text-lg font-semibold text-green-600">Tu mensaje ha sido preparado para ser enviado por WhatsApp.</p>
-              </div>
-            </div>
+             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
+    <div className="bg-white p-6 rounded-md shadow-lg text-center">
+  <p className="text-lg font-semibold text-green-600">Tu mensaje ha sido preparado para ser enviado por WhatsApp.</p>
+</div>
+  </div>
           )}
         </div>
       </div>
