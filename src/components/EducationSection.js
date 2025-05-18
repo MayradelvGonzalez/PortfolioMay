@@ -2,11 +2,7 @@ import React from 'react';
 
 const EducationSection = () => {
   const education = [
-    {
-      title: "DATA ANALYTICS",
-      institution: "Coderhouse",
-      period: "Junio 2024 - Actualidad"
-    },
+   
     {
       title: "FULLSTACK MERN & MOBILE APPS",
       institution: "Mindhub LA",
@@ -26,39 +22,44 @@ const EducationSection = () => {
 
   const courses = [
     {
-      title: "Planificación y gestión de proyectos: PMBOK y Agile Scrum",
+      titulo: "Planificación y gestión de proyectos:PMBOK y Agile Scrum",
       institution: "Udemy",
-      period: "Mayo 2025"
+      periodo: "Mayo 2025"
+    },
+     {
+      titulo: "Data Analytics",
+      institution: "Coderhouse",
+      periodo: "Junio 2024"
     },
     {
-      title: "Curso Big Data",
+      titulo: "Curso Big Data",
       institution: "Codo a Codo",
-      period: "Agosto 2023"
+      periodo: "Agosto 2023"
     },
     {
-      title: "NodeJS - Creando API con Express y MongoDB",
+      titulo: "NodeJS - Creando API con Express y MongoDB",
       institution: "Udemy",
-      period: "Abril 2023"
+      periodo: "Abril 2023"
     },
     {
-      title: "Universidad Javascript - De cero a master",
+      titulo: "Universidad Javascript - De cero a master",
       institution: "Udemy",
-      period: "Abril 2021"
+      periodo: "Abril 2021"
     },
     {
-      title: "Productividad Personal",
+      titulo: "Productividad Personal",
       institution: "Google Actívate",
-      period: "Junio 2021"
+      periodo: "Junio 2021"
     },
     {
-      title: "ReactJS, Guía desde 0",
+      titulo: "ReactJS, Guía desde 0",
       institution: "Udemy",
-      period: "Junio 2021"
+      periodo: "Junio 2021"
     },
     {
-      title: "HTML, Javascript y Bootstrap",
+      titulo: "HTML, Javascript y Bootstrap",
       institution: "Udemy",
-      period: "Agosto 2021"
+      periodo: "Agosto 2021"
     }
   ];
 
