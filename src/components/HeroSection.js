@@ -23,7 +23,7 @@ const HeroSection = ({ scrollToContact }) => {
         <img
           src={remoteWorkGraphic}
           alt="Ilustración de trabajo remoto o diseño"
-          className="w-64 h-auto mb-6 md:mb-0 md:mr-8" // Ajusta el tamaño y los márgenes según necesites
+          className="w-48 h-auto mb-6 md:mb-0 md:mr-6" // Ajusta el tamaño y los márgenes según necesites
         />
 
         {/* Contenido de texto a la derecha */}
@@ -32,7 +32,7 @@ const HeroSection = ({ scrollToContact }) => {
             Hola, soy <span className="text-green-900">Mayra</span>
           </h1>
           <p className="text-xl md:text-2xl text-black-900 mb-8">
-            Junior Developer Jr & Project Manager Trainee
+            Full Stack Developer Jr & Project Manager Trainee
           </p>
           <div className="flex gap-4 justify-center md:justify-start">
             <a

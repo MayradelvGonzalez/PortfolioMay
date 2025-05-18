@@ -87,9 +87,9 @@ const EducationSection = () => {
             <div className="space-y-6">
               {courses.map((item, index) => (
                 <div key={index} className="border-l-8 border-green-500 pl-6 py-2" style={{ backgroundColor: '#c3c7c4' }}>
-                  <h4 className="font-bold text-green-800">{item.title}</h4>
+                  <h4 className="font-bold text-green-800">{item.titulo}</h4>
                   <p className="text-black-600">{item.institution}</p>
-                  <p className="text-sm text-black-500">{item.period}</p>
+                  <p className="text-sm text-black-500">{item.periodo}</p>
                 </div>
               ))}
             </div>
