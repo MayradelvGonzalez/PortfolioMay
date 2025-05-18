@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HeroSection = () => {
+const HeroSection = ({ scrollToContact }) => { // Recibir la función como prop
   return (
     <section className="min-h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center px-4">
       <div className="text-center max-w-4xl">
@@ -11,10 +11,13 @@ const HeroSection = () => {
           Junior Developer Jr & Project Manager Trainee
         </p>
         <div className="flex gap-4 justify-center">
-          <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+          <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:text-black hover:bg-red-400" style={{ border: '1px solid black' }}>
             Ver proyectos
           </button>
-          <button className="border-2 border-green-600 text-green-600 font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-green-50">
+          <button
+            className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:text-black hover:bg-red-400" style={{ border: '1px solid black' }}
+            onClick={scrollToContact} // Usar la función recibida como prop
+          >
             Contacto
           </button>
         </div>
