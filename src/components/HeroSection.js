@@ -8,7 +8,7 @@ const HeroSection = () => {
           Hola, soy <span className="text-green-600">FullStack MERN</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-700 mb-8">
-          Junior Developer & Project Manager Trainee | B2/C1 English
+          Junior Developer Jr & Project Manager Trainee
         </p>
         <div className="flex gap-4 justify-center">
           <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
