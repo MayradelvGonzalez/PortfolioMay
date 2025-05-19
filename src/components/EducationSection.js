@@ -1,5 +1,5 @@
 import React from 'react';
-
+import libros from '../libros.png'; 
 const EducationSection = () => {
   const education = [
    
@@ -19,6 +19,7 @@ const EducationSection = () => {
       period: "Marzo 2010 - Marzo 2013"
     }
   ];
+
 
   const courses = [
     {
@@ -61,13 +62,14 @@ const EducationSection = () => {
       institution: "Udemy",
       periodo: "Agosto 2021"
     }
+    
   ];
 
   return (
     <section className="py-20 bg-green-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-green-800 mb-12 text-center"><u>Formación Académica</u></h2>
-        
+       
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-xl font-bold text-green-700 mb-6">Educación Formal</h3>
@@ -91,7 +93,7 @@ const EducationSection = () => {
                   <p className="text-black-600">{item.institution}</p>
                   <p className="text-sm text-black-500">{item.periodo}</p>
                 </div>
-              ))}
+              ))} 
             </div>
           </div>
         </div>

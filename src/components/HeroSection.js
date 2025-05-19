@@ -1,39 +1,95 @@
-import React from 'react';
-import remoteWorkGraphic from '../imagen.png'; 
-
+import React, { useRef, useEffect, useState } from 'react';
+import remoteWorkGraphic from '../imagen.png';
 import 'animate.css';
-const HeroSection = ({ scrollToContact }) => {
-  return (
-    <section className="min-h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center px-4"
-           style={{
-    backgroundColor: '#e5e5f7',
-    opacity: 0.8,
-    backgroundImage: 'repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient(rgba(45, 175, 153, 0.33),rgb(17, 99, 41) )',
-  }}
-    
-    
-    
-    
-    >
-      <div className="flex flex-col md:flex-row items-center justify-center max-w-5xl" 
 
-      style={{ backgroundColor: 'lightgray', padding: '120px', borderRadius: '20px 70px', border: '1px black solid'}} // 
-      
+const HeroSection = ({ scrollToContact }) => {
+  const sectionRef = useRef(null);
+  const imageRef = useRef(null);
+  const titleRef = useRef(null);
+  const paragraphRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false); // Estado para controlar si la sección está visible
+
+  const handleScroll = () => {
+    if (sectionRef.current) {
+      const rect = sectionRef.current.getBoundingClientRect();
+      const isCurrentlyVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+      if (isCurrentlyVisible) {
+        setIsVisible(true);
+        // Agregamos las clases de animación y la de duración
+        imageRef.current?.classList.add('animate__animated', 'animate__fadeInRight', 'animate__slow');
+        titleRef.current?.classList.add('animate__animated', 'animate__fadeInRight', 'animate__slow');
+        paragraphRef.current?.classList.add('animate__animated', 'animate__zoomIn', 'animate__slow');
+      } else {
+        // Opcionalmente, puedes remover las clases si quieres que la animación se resetee
+        imageRef.current?.classList.remove('animate__animated', 'animate__fadeInRight', 'animate__slow');
+        titleRef.current?.classList.remove('animate__animated', 'animate__fadeInRight', 'animate__slow');
+        paragraphRef.current?.classList.remove('animate__animated', 'animate__zoomIn', 'animate__slow');
+        setIsVisible(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    // Verificamos la visibilidad inicial al cargar la página
+    const checkInitialVisibility = () => {
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const isInitiallyVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+        if (isInitiallyVisible) {
+          setIsVisible(true);
+          imageRef.current?.classList.add('animate__animated', 'animate__fadeInRight', 'animate__slow');
+          titleRef.current?.classList.add('animate__animated', 'animate__fadeInRight', 'animate__slow');
+          paragraphRef.current?.classList.add('animate__animated', 'animate__zoomIn', 'animate__slow');
+        }
+      }
+    };
+
+    // Ejecutamos la verificación inicial después de un pequeño delay para asegurar que el layout esté completo
+    setTimeout(checkInitialVisibility, 100);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <section
+      className="min-h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center px-4"
+      style={{
+        backgroundColor: '#e5e5f7',
+        opacity: 0.8,
+        backgroundImage:
+          'repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient(rgba(45, 175, 153, 0.33),rgb(17, 99, 41) )',
+      }}
+      ref={sectionRef}
+    >
+      <div
+        className="flex flex-col md:flex-row items-center justify-center max-w-5xl"
+        style={{ backgroundColor: 'lightgray', padding: '120px', borderRadius: '20px 70px', border: '1px black solid' }}
       >
-        {/* Imagen a la izquierda (se mostrará en la parte superior en pantallas pequeñas) */}
+        {/* Imagen a la izquierda */}
         <img
+          ref={imageRef}
           src={remoteWorkGraphic}
           alt="Ilustración de trabajo remoto o diseño"
-          className="w-48 h-auto mb-6 md:mb-0 md:mr-6 animate__animated animate__fadeInRight" // Ajusta el tamaño y los márgenes según necesites
+          className="w-48 h-auto mb-6 md:mb-0 md:mr-6"
         />
-       
 
         {/* Contenido de texto a la derecha */}
-        <div className="text-center md:text-left animate__animated animate__fadeInRight">
-          <h1 className="text-5xl md:text-7xl font-bold text-green-900 mb-6">
+        <div className="text-center md:text-left">
+          <h1
+            ref={titleRef}
+            className="text-5xl md:text-7xl font-bold text-green-900 mb-6"
+          >
             Hola, soy <span className="text-green-900">Mayra</span>
           </h1>
-          <p className="text-xl md:text-2xl text-black-900 mb-8 animate__animated animate__zoomIn">
+          <p
+            ref={paragraphRef}
+            className="text-xl md:text-2xl text-black-900 mb-8"
+          >
             Full Stack Developer Jr & Project Manager Trainee
           </p>
           <div className="flex gap-4 justify-center md:justify-start">
