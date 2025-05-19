@@ -4,7 +4,7 @@ import 'animate.css'; // Asegúrate de importar la librería de animación
 
 const ContactSection = forwardRef((_, ref) => {
   const telefonoWhatsApp = '+5493815160008';
-  const mensajePredefinido = 'Hola, ¿como estas? Me gustaría saber más sobre tus servicios.';
+  const mensajePredefinido = 'Hola, ¿cómo estás? Me gustaría saber más sobre tus servicios.';
   const urlWhatsApp = `https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(mensajePredefinido)}`;
   const [isVisible, setIsVisible] = useState(false);
   const titleRef = useRef(null); // Creamos una referencia para el título
@@ -71,9 +71,9 @@ const ContactSection = forwardRef((_, ref) => {
       {showScrollToTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-8 right-8 bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 animate__animated animate__fadeIn"
+          className="fixed bottom-8 right-8 bg-gray-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 animate__animated animate__fadeIn"
         >
-          Volver al Inicio
+          🔼
         </button>
       )}
     </section>

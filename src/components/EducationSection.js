@@ -1,8 +1,9 @@
 import React from 'react';
-import libros from '../libros.png'; 
+import { useInView } from 'react-intersection-observer';
+import 'animate.css';
+
 const EducationSection = () => {
   const education = [
-   
     {
       title: "FULLSTACK MERN & MOBILE APPS",
       institution: "Mindhub LA",
@@ -20,14 +21,13 @@ const EducationSection = () => {
     }
   ];
 
-
   const courses = [
     {
       titulo: "Planificación y gestión de proyectos:PMBOK y Agile Scrum",
       institution: "Udemy",
       periodo: "Mayo 2025"
     },
-     {
+    {
       titulo: "Data Analytics",
       institution: "Coderhouse",
       periodo: "Junio 2024"
@@ -62,24 +62,37 @@ const EducationSection = () => {
       institution: "Udemy",
       periodo: "Agosto 2021"
     }
-    
   ];
+
+  const AnimatedItem = ({ item, animationClass }) => {
+    const { ref, inView } = useInView({
+      threshold: 0.1,
+    });
+
+    return (
+      <div
+        ref={ref}
+        className={`border-l-8 border-green-500 pl-6 py-2 animate__animated ${inView ? animationClass : ''}`}
+        style={{ backgroundColor: '#c3c7c4' }}
+      >
+        <h4 className="font-bold text-green-800">{item.title || item.titulo}</h4>
+        <p className="text-black-600">{item.institution}</p>
+        <p className="text-sm text-black-500">{item.period || item.periodo}</p>
+      </div>
+    );
+  };
 
   return (
     <section className="py-20 bg-green-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-green-800 mb-12 text-center"><u>Formación Académica</u></h2>
-       
+        <h2 className="text-3xl font-bold text-green-800 mb-12 text-center animate__animated animate__fadeInRight"><u>Formación Académica</u></h2>
+
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-xl font-bold text-green-700 mb-6">Educación Formal</h3>
             <div className="space-y-6">
               {education.map((item, index) => (
-                <div key={index} className="border-l-8 border-green-500 pl-6 py-2" style={{ backgroundColor: '#c3c7c4' }}>
-                  <h4 className="font-bold text-green-800">{item.title}</h4>
-                  <p className="text-black-600">{item.institution}</p>
-                  <p className="text-sm text-black-500">{item.period}</p>
-                </div>
+                <AnimatedItem key={index} item={item} animationClass="animate__fadeInLeft" />
               ))}
             </div>
           </div>
@@ -88,12 +101,8 @@ const EducationSection = () => {
             <h3 className="text-xl font-bold text-green-700 mb-6">Cursos y Certificaciones</h3>
             <div className="space-y-6">
               {courses.map((item, index) => (
-                <div key={index} className="border-l-8 border-green-500 pl-6 py-2" style={{ backgroundColor: '#c3c7c4' }}>
-                  <h4 className="font-bold text-green-800">{item.titulo}</h4>
-                  <p className="text-black-600">{item.institution}</p>
-                  <p className="text-sm text-black-500">{item.periodo}</p>
-                </div>
-              ))} 
+                <AnimatedItem key={index} item={item} animationClass="animate__fadeInRight" />
+              ))}
             </div>
           </div>
         </div>

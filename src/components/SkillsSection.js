@@ -1,8 +1,10 @@
 import React from 'react';
-import mouse from '../mouse.jpg';
+import { useInView } from 'react-intersection-observer';
+import 'animate.css';
+
 const SkillsSection = () => {
   const techSkills = [
-    'Javascript', 'ReactJS', 'Redux', 
+    'Javascript', 'ReactJS', 'Redux',
     'NodeJS', 'NestJS', 'MongoDB',
     'Bootstrap', 'Material UI'
   ];
@@ -13,42 +15,90 @@ const SkillsSection = () => {
     'Autonomía', 'Manejo de equipos'
   ];
 
+  const AnimatedSkill = ({ skill, index, animationClass }) => {
+    const { ref, inView } = useInView({
+      threshold: 0.1,
+    });
+
+    return (
+      <span
+        ref={ref}
+        key={index}
+        className={`bg-green-100 text-black-800 px-4 py-2 rounded-full animate__animated ${inView ? animationClass : ''}`}
+      >
+        {skill}
+      </span>
+    );
+  };
+
+  const AnimatedSoftSkill = ({ skill, index, animationClass }) => {
+    const { ref, inView } = useInView({
+      threshold: 0.1,
+    });
+
+    return (
+      <span
+        ref={ref}
+        key={index}
+        className={`bg-green-50 border border-green-200 text-black-800 px-4 py-2 rounded-full animate__animated ${inView ? animationClass : ''}`}
+      >
+        {skill}
+      </span>
+    );
+  };
+
+  const AnimatedTitle = () => {
+    const { ref, inView } = useInView({
+      threshold: 0.1,
+    });
+
+    return (
+      <h2
+        ref={ref}
+        className={`text-3xl font-bold text-green-800 mb-12 text-center animate__animated ${inView ? 'animate__fadeInLeft' : ''}`}
+      >
+        <u>Mis Habilidades</u>
+      </h2>
+    );
+  };
+
+  const AnimatedSubtitle = ({ children, animationClass }) => {
+    const { ref, inView } = useInView({
+      threshold: 0.1,
+    });
+
+    return (
+      <h3
+        ref={ref}
+        className={`text-xl font-semibold text-green-800 mb-6 flex items-center animate__animated ${inView ? animationClass : ''}`}
+      >
+        <span className="w-4 h-4 bg-green-500 rounded-full mr-2"></span>
+        {children}
+      </h3>
+    );
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-green-800 mb-12 text-center"><u>Mis Habilidades</u></h2>
-        
+        <AnimatedTitle />
+
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-xl font-semibold text-green-800 mb-6 flex items-center">
-              <span className="w-4 h-4 bg-green-500 rounded-full mr-2"></span>
-              Tecnológicas
-            </h3>
+            <AnimatedSubtitle animationClass="animate__fadeInRight">Tecnológicas</AnimatedSubtitle>
             <div className="flex flex-wrap gap-3">
               {techSkills.map((skill, index) => (
-                <span key={index} className="bg-green-100 text-black-800 px-4 py-2 rounded-full">
-                  {skill}
-                </span>
+                <AnimatedSkill key={index} skill={skill} index={index} animationClass="animate__slideInLeft" />
               ))}
             </div>
           </div>
 
           <div>
-  
-            <h3 className="text-xl font-semibold text-green-800 mb-6 flex items-center">
-              <span className="w-4 h-4 bg-green-500 rounded-full mr-2"></span>
-              Blandas
-            </h3>            
-            <div className="flex flex-wrap gap-3"> 
+            <AnimatedSubtitle animationClass="animate__fadeInLeft">Blandas</AnimatedSubtitle>
+            <div className="flex flex-wrap gap-3">
               {softSkills.map((skill, index) => (
-                <span key={index} className="bg-green-50 border border-green-200 text-black-800 px-4 py-2 rounded-full">
-                  {skill}
-                </span>
-              ))}<img
-          src={mouse}
-          alt="Ilustración de trabajo remoto o diseño"
-          className="w-48 h-auto mb-6 md:mb-0 md:mr-6 animate__animated animate__fadeInRight" // Ajusta el tamaño y los márgenes según necesites
-        />
+                <AnimatedSoftSkill key={index} skill={skill} index={index} animationClass="animate__slideInRight" />
+              ))}
             </div>
           </div>
         </div>
