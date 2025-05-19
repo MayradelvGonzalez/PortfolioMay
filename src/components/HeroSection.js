@@ -57,7 +57,7 @@ const HeroSection = ({ scrollToContact }) => {
 
   return (
     <section
-      className="min-h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center px-4"
+      className="h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center px-4"
       style={{
         backgroundColor: '#e5e5f7',
         opacity: 0.8,
@@ -68,13 +68,13 @@ const HeroSection = ({ scrollToContact }) => {
     >
       <div
         className="flex flex-col md:flex-row items-center justify-center max-w-2xl"
-        style={{ backgroundColor: 'lightgray', padding: '40px', margin:'50px', borderRadius: '20px 70px', border: '1px black solid' }}
+        style={{ backgroundColor: 'lightgray', padding: '30px', borderRadius: '20px 70px', border: '1px black solid' }}
       >
         {/* Imagen a la izquierda */}
         <img
           ref={imageRef}
           src={remoteWorkGraphic}
-          alt="Ilustración de trabajo remoto o diseño"
+          alt="avatar"
           className="w-48 h-auto mb-6 md:mb-0 md:mr-6"
           style={{ borderRadius: '50%', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}
         />
@@ -83,7 +83,7 @@ const HeroSection = ({ scrollToContact }) => {
         <div className="text-center md:text-left">
           <h1
             ref={titleRef}
-            className="text-5xl md:text-7xl font-bold text-green-900 mb-6"
+            className="text-5xl md:text-5xl font-bold text-green-900 mb-6"
           >
             Hola, soy <span className="text-green-900">Mayra</span>
           </h1>
@@ -93,7 +93,7 @@ const HeroSection = ({ scrollToContact }) => {
           >
             Full Stack Developer Jr & Project Manager Trainee
           </p>
-          <div className="flex gap-4 justify-center md:justify-start">
+          <div className="flex gap-6 justify-center md:justify-start">
             <a
               href="https://github.com/MayradelvGonzalez"
               target="_blank"
