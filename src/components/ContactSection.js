@@ -66,8 +66,7 @@ const ContactSection = forwardRef((_, ref) => {
             />
           </a>
         </div>
-      </div>
-
+     
       {showScrollToTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -75,7 +74,8 @@ const ContactSection = forwardRef((_, ref) => {
         >
           🔼
         </button>
-      )}
+      )} </div>
+
     </section>
   );
 });

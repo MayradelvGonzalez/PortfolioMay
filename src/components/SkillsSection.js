@@ -17,7 +17,7 @@ const SkillsSection = () => {
 
   const AnimatedSkill = ({ skill, index, animationClass }) => {
     const { ref, inView } = useInView({
-      threshold: 0.1,
+      threshold: 0.5,
     });
 
     return (
@@ -33,7 +33,7 @@ const SkillsSection = () => {
 
   const AnimatedSoftSkill = ({ skill, index, animationClass }) => {
     const { ref, inView } = useInView({
-      threshold: 0.1,
+      threshold: 0.5,
     });
 
     return (
@@ -49,7 +49,7 @@ const SkillsSection = () => {
 
   const AnimatedTitle = () => {
     const { ref, inView } = useInView({
-      threshold: 0.1,
+      threshold: 0.6,
     });
 
     return (
@@ -66,7 +66,7 @@ const SkillsSection = () => {
 
   const AnimatedSubtitle = ({ children, animationClass }) => {
     const { ref, inView } = useInView({
-      threshold: 0.1,
+      threshold: 0.6,
     });
 
     return (
@@ -87,19 +87,19 @@ const SkillsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <AnimatedSubtitle animationClass="animate__fadeInRight">Tecnológicas</AnimatedSubtitle>
+            <AnimatedSubtitle animationClass="animate__zoomIn">Tecnológicas</AnimatedSubtitle>
             <div className="flex flex-wrap gap-3">
               {techSkills.map((skill, index) => (
-                <AnimatedSkill key={index} skill={skill} index={index} animationClass="animate__slideInLeft" />
+                <AnimatedSkill key={index} skill={skill} index={index} animationClass="animate__fadeIn" />
               ))}
             </div>
           </div>
 
           <div>
-            <AnimatedSubtitle animationClass="animate__fadeInLeft">Blandas</AnimatedSubtitle>
+            <AnimatedSubtitle animationClass="animate__zoomIn">Blandas</AnimatedSubtitle>
             <div className="flex flex-wrap gap-3">
               {softSkills.map((skill, index) => (
-                <AnimatedSoftSkill key={index} skill={skill} index={index} animationClass="animate__slideInRight" />
+                <AnimatedSoftSkill key={index} skill={skill} index={index} animationClass="animate__fadeIn" />
               ))}
             </div>
           </div>

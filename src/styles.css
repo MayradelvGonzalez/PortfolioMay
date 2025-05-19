@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (max-width: 640px) {
+  /* Estilos específicos para pantallas pequeñas (celulares) */
+  main {
+    width: 100%;
+    overflow-x: auto; /* Si el contenido debe ser horizontalmente scrollable */
+  }
+}

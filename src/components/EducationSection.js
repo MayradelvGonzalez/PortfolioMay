@@ -2,6 +2,24 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import 'animate.css';
 
+const AnimatedItem = ({ item, animationClass }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+  });
+
+  return (
+    <div
+      ref={ref}
+      className={`border-l-8 border-green-500 pl-6 py-2 animate__animated ${inView && animationClass ? animationClass : ''}`}
+      style={{ backgroundColor: '#c3c7c4' }}
+    >
+      <h4 className="font-bold text-green-800">{item.title || item.titulo}</h4>
+      <p className="text-black-600">{item.institution}</p>
+      <p className="text-sm text-black-500">{item.period || item.periodo}</p>
+    </div>
+  );
+};
+
 const EducationSection = () => {
   const education = [
     {
@@ -64,21 +82,18 @@ const EducationSection = () => {
     }
   ];
 
-  const AnimatedItem = ({ item, animationClass }) => {
+  const AnimatedTitle = ({ children, animationClass }) => {
     const { ref, inView } = useInView({
       threshold: 0.1,
     });
 
     return (
-      <div
+      <h3
         ref={ref}
-        className={`border-l-8 border-green-500 pl-6 py-2 animate__animated ${inView ? animationClass : ''}`}
-        style={{ backgroundColor: '#c3c7c4' }}
+        className={`text-xl font-bold text-green-700 mb-6 animate__animated ${inView ? animationClass : ''}`}
       >
-        <h4 className="font-bold text-green-800">{item.title || item.titulo}</h4>
-        <p className="text-black-600">{item.institution}</p>
-        <p className="text-sm text-black-500">{item.period || item.periodo}</p>
-      </div>
+        {children}
+      </h3>
     );
   };
 
@@ -89,19 +104,19 @@ const EducationSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-xl font-bold text-green-700 mb-6">Educación Formal</h3>
+            <AnimatedTitle animationClass="animate__zoomIn">Educación Formal</AnimatedTitle>
             <div className="space-y-6">
               {education.map((item, index) => (
-                <AnimatedItem key={index} item={item} animationClass="animate__fadeInLeft" />
+                <AnimatedItem key={index} item={item} animationClass="animate__zoomIn" />
               ))}
             </div>
           </div>
 
           <div>
-            <h3 className="text-xl font-bold text-green-700 mb-6">Cursos y Certificaciones</h3>
+            <AnimatedTitle animationClass="animate__zoomIn">Cursos y Certificaciones</AnimatedTitle>
             <div className="space-y-6">
               {courses.map((item, index) => (
-                <AnimatedItem key={index} item={item} animationClass="animate__fadeInRight" />
+                <AnimatedItem key={index} item={item} animationClass="animate__zoomIn" />
               ))}
             </div>
           </div>
