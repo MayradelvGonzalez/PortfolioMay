@@ -107,7 +107,7 @@ const EducationSection = () => {
             <AnimatedTitle animationClass="animate__zoomIn">Educación Formal</AnimatedTitle>
             <div className="space-y-6">
               {education.map((item, index) => (
-                <AnimatedItem key={index} item={item} animationClass="animate__zoomIn" />
+                <AnimatedItem key={index} item={item}  />
               ))}
             </div>
           </div>
@@ -116,7 +116,7 @@ const EducationSection = () => {
             <AnimatedTitle animationClass="animate__zoomIn">Cursos y Certificaciones</AnimatedTitle>
             <div className="space-y-6">
               {courses.map((item, index) => (
-                <AnimatedItem key={index} item={item} animationClass="animate__zoomIn" />
+                <AnimatedItem key={index} item={item} />
               ))}
             </div>
           </div>

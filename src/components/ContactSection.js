@@ -68,12 +68,12 @@ const ContactSection = forwardRef((_, ref) => {
         </div>
      
       {showScrollToTop && (
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-8 right-8 bg-gray-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 animate__animated animate__fadeIn"
-        >
-          🔼
-        </button>
+      <button
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+  className="fixed bottom-8 right-8 bg-gray-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 animate__animated animate__fadeIn"
+>
+  🔼
+</button>
       )} </div>
 
     </section>
