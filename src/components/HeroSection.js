@@ -67,7 +67,7 @@ const HeroSection = ({ scrollToContact }) => {
       ref={sectionRef}
     >
       <div
-        className="flex flex-col md:flex-row items-center justify-center max-w-2xl"
+        className="flex flex-col md:flex-row items-center justify-center max-w-2xl w-full" // Añadido w-full aquí
         style={{ backgroundColor: 'lightgray', padding: '30px', borderRadius: '20px 70px', border: '1px black solid' }}
       >
         {/* Imagen a la izquierda */}
@@ -75,12 +75,12 @@ const HeroSection = ({ scrollToContact }) => {
           ref={imageRef}
           src={remoteWorkGraphic}
           alt="avatar"
-          className="w-48 h-auto mb-6 md:mb-0 md:mr-6"
+          className="w-48 h-auto mb-6 md:mb-0 md:mr-6 max-w-full" // Añadido max-w-full aquí
           style={{ borderRadius: '50%', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}
         />
 
         {/* Contenido de texto a la derecha */}
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left w-full"> {/* Añadido w-full aquí */}
           <h1
             ref={titleRef}
             className="text-5xl md:text-5xl font-bold text-green-900 mb-6"

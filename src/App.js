@@ -12,7 +12,7 @@ function App() {
   };
 
   return (
-    <div className="font-sans text-gray-800">
+    <div className="font-sans text-gray-800 w-full overflow-x-hidden"> {/* Añadido w-full y overflow-x-hidden */}
       <HeroSection scrollToContact={scrollToContact} /> {/* Pasar la función */}
       <SkillsSection />
       <EducationSection />
