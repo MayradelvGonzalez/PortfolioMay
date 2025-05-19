@@ -85,7 +85,7 @@ const EducationSection = () => {
   return (
     <section className="py-20 bg-green-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-green-800 mb-12 text-center animate__animated animate__fadeInRight"><u>Formación Académica</u></h2>
+        <h2 className="text-3xl font-bold text-green-800 mb-12 text-center"><u>Formación Académica</u></h2>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>

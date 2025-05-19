@@ -55,7 +55,9 @@ const SkillsSection = () => {
     return (
       <h2
         ref={ref}
-        className={`text-3xl font-bold text-green-800 mb-12 text-center animate__animated ${inView ? 'animate__fadeInLeft' : ''}`}
+        className={`text-3xl font-bold text-green-800 mb-12}`}
+          style={{ textAlign: 'center', padding: '20px'}
+        }
       >
         <u>Mis Habilidades</u>
       </h2>
