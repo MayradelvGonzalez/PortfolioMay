@@ -1,6 +1,7 @@
 import React from 'react';
-import remoteWorkGraphic from '../imagen.png'; // Importa la imagen (ajusta la ruta)
+import remoteWorkGraphic from '../imagen.png'; 
 
+import 'animate.css';
 const HeroSection = ({ scrollToContact }) => {
   return (
     <section className="min-h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center px-4"
@@ -23,15 +24,16 @@ const HeroSection = ({ scrollToContact }) => {
         <img
           src={remoteWorkGraphic}
           alt="Ilustración de trabajo remoto o diseño"
-          className="w-48 h-auto mb-6 md:mb-0 md:mr-6" // Ajusta el tamaño y los márgenes según necesites
+          className="w-48 h-auto mb-6 md:mb-0 md:mr-6 animate__animated animate__fadeInRight" // Ajusta el tamaño y los márgenes según necesites
         />
+       
 
         {/* Contenido de texto a la derecha */}
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left animate__animated animate__fadeInRight">
           <h1 className="text-5xl md:text-7xl font-bold text-green-900 mb-6">
             Hola, soy <span className="text-green-900">Mayra</span>
           </h1>
-          <p className="text-xl md:text-2xl text-black-900 mb-8">
+          <p className="text-xl md:text-2xl text-black-900 mb-8 animate__animated animate__zoomIn">
             Full Stack Developer Jr & Project Manager Trainee
           </p>
           <div className="flex gap-4 justify-center md:justify-start">

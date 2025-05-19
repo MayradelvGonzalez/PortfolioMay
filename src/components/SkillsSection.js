@@ -1,5 +1,5 @@
 import React from 'react';
-
+import mouse from '../mouse.jpg';
 const SkillsSection = () => {
   const techSkills = [
     'Javascript', 'ReactJS', 'Redux', 
@@ -34,16 +34,21 @@ const SkillsSection = () => {
           </div>
 
           <div>
+  
             <h3 className="text-xl font-semibold text-green-800 mb-6 flex items-center">
               <span className="w-4 h-4 bg-green-500 rounded-full mr-2"></span>
               Blandas
-            </h3>
-            <div className="flex flex-wrap gap-3">
+            </h3>            
+            <div className="flex flex-wrap gap-3"> 
               {softSkills.map((skill, index) => (
                 <span key={index} className="bg-green-50 border border-green-200 text-black-800 px-4 py-2 rounded-full">
                   {skill}
                 </span>
-              ))}
+              ))}<img
+          src={mouse}
+          alt="Ilustración de trabajo remoto o diseño"
+          className="w-48 h-auto mb-6 md:mb-0 md:mr-6 animate__animated animate__fadeInRight" // Ajusta el tamaño y los márgenes según necesites
+        />
             </div>
           </div>
         </div>
