@@ -16,16 +16,7 @@ const ContactSection = forwardRef((_, ref) => {
       const isCurrentlyVisible = rect.top < window.innerHeight && rect.bottom >= 0;
       setIsVisible(isCurrentlyVisible);
     }
-
-    // Mantenemos la lógica para el botón "Volver al Inicio"
-    if (window.scrollY > 100) {
-      setShowScrollToTop(true);
-    } else {
-      setShowScrollToTop(false);
-    }
   };
-
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -66,18 +57,28 @@ const ContactSection = forwardRef((_, ref) => {
             />
           </a>
         </div>
-     </div>
-      {showScrollToTop && (
-      <button
-  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-  className="fixed bottom-8 right-8 bg-gray-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 animate__animated animate__fadeIn"
->
-  🔼
-</button>
-      )} 
-
+      </div>
     </section>
   );
 });
 
-export default ContactSection;
+const Footer = () => (
+  <footer className="bg-gray-200 py-4 text-center text-gray-600">
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      className="bg-green-600 text-white font-bold py-2 px-6 rounded-full shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 animate__animated animate__fadeIn"
+    >
+      🔼 
+    </button>
+
+  </footer>
+);
+
+const ContactWithFooter = forwardRef((_, ref) => (
+  <>
+    <ContactSection ref={ref} />
+    <Footer />
+  </>
+));
+
+export default ContactWithFooter;
