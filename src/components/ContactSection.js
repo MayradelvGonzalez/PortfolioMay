@@ -12,7 +12,7 @@ const ContactSection = forwardRef((_, ref) => {
   const handleScroll = () => {
     if (titleRef.current) {
       const rect = titleRef.current.getBoundingClientRect();
-      // Verificamos si el elemento está dentro de la ventana visible
+
       const isCurrentlyVisible = rect.top < window.innerHeight && rect.bottom >= 0;
       setIsVisible(isCurrentlyVisible);
     }
@@ -33,7 +33,7 @@ const ContactSection = forwardRef((_, ref) => {
     >
       <div className="container mx-auto px-4 max-w-4xl">
         <h2
-          ref={titleRef} // Asignamos la referencia al h2
+          ref={titleRef} 
           className={`text-3xl font-bold text-green-800 mb-12 text-center ${
             isVisible ? 'animate__animated animate__rubberBand animate__slow' : ''
           }`}
@@ -63,12 +63,12 @@ const ContactSection = forwardRef((_, ref) => {
 });
 
 const Footer = () => (
-  <footer className="bg-gray-200 py-4 text-center text-gray-600">
+  <footer className="bg-gray-300 py-1 text-center text-gray-600">
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      className="bg-green-600 text-white font-bold py-2 px-6 rounded-full shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 animate__animated animate__fadeIn"
+      className="bg-green-500 text-black font-semibold py-2 px-4 rounded-full shadow-md hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-800 animate__animated animate__fadeIn"
     >
-      🔼 
+      Volver al Inicio🔼
     </button>
 
   </footer>

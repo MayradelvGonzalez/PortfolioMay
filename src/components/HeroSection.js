@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import remoteWorkGraphic from '../imagen.png';
+import remoteWorkGraphic from '../avatarImg.jpg';
 import 'animate.css';
 
 const HeroSection = ({ scrollToContact }) => {
@@ -67,8 +67,8 @@ const HeroSection = ({ scrollToContact }) => {
       ref={sectionRef}
     >
       <div
-        className="flex flex-col md:flex-row items-center justify-center max-w-5xl"
-        style={{ backgroundColor: 'lightgray', padding: '120px', borderRadius: '20px 70px', border: '1px black solid' }}
+        className="flex flex-col md:flex-row items-center justify-center max-w-2xl"
+        style={{ backgroundColor: 'lightgray', padding: '40px', margin:'50px', borderRadius: '20px 70px', border: '1px black solid' }}
       >
         {/* Imagen a la izquierda */}
         <img
@@ -76,6 +76,7 @@ const HeroSection = ({ scrollToContact }) => {
           src={remoteWorkGraphic}
           alt="Ilustración de trabajo remoto o diseño"
           className="w-48 h-auto mb-6 md:mb-0 md:mr-6"
+          style={{ borderRadius: '50%', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}
         />
 
         {/* Contenido de texto a la derecha */}
