@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import wspIcon from '../whatsapp.png';
-import 'animate.css'; // Asegúrate de importar la librería de animación
+import linkedinIcon from '../linkedin.png';
+import 'animate.css'; 
 
 const ContactSection = forwardRef((_, ref) => {
   const telefonoWhatsApp = '+5493815160008';
   const mensajePredefinido = 'Hola, ¿cómo estás? Me gustaría saber más sobre tus servicios.';
   const urlWhatsApp = `https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(mensajePredefinido)}`;
+  const urlLinkedin = `https://www.linkedin.com/in/mayra-gonz%C3%A1lez-v/`;
   const [isVisible, setIsVisible] = useState(false);
   const titleRef = useRef(null); // Creamos una referencia para el título
 
@@ -47,7 +49,7 @@ const ContactSection = forwardRef((_, ref) => {
             href={urlWhatsApp}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center bg-c3c7c4 text-black font-bold py-3 px-6 rounded-lg transition duration-300 hover:bg-red hover:text-green-800 border border-black"
+            className="inline-flex items-center bg-c3c7c4 text-black font-bold py-3 px-6 rounded-lg transition duration-300 hover:bg-red hover:text-green-500 hover:bg-blue-800 border border-black"
           >
             Abrir WhatsApp
             <img
@@ -56,6 +58,24 @@ const ContactSection = forwardRef((_, ref) => {
               className="inline-block w-5 h-5 ml-2"
             />
           </a>
+          
+        </div>
+           <div className="bg-green-50 rounded-xl p-8 shadow-lg text-center">
+          <p className="mb-4">¡Visita mi perfil en Linkedin!</p>
+          <a
+            href={urlLinkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-c3c7c4 text-black font-bold py-3 px-6 rounded-lg transition duration-300 hover:bg-red hover:text-blue-800 hover:bg-green-600 border border-black"
+          >
+            Ir a Linkedin
+            <img
+              src={linkedinIcon}
+              alt="LInkedin"
+              className="inline-block w-5 h-5 ml-2"
+            />
+          </a>
+          
         </div>
       </div>
     </section>
@@ -66,7 +86,7 @@ const Footer = () => (
   <footer className="bg-gray-300 py-1 text-center text-gray-600">
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      className="bg-green-500 text-black font-semibold py-2 px-4 rounded-full shadow-md hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-800 animate__animated animate__fadeIn"
+      className="bg-green-500 text-black font-semibold py-2 px-4 rounded-full shadow-md hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-800 animate__animated animate__fadeIn"
     >
       Volver al Inicio🔼
     </button>
