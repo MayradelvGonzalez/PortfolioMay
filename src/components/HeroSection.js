@@ -59,7 +59,7 @@ const HeroSection = ({ scrollToContact }) => {
     <section
       className="h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center px-4"
       style={{
-        backgroundColor: '#e5e5f7',
+        backgroundColor: '#1edfa5ff',
         opacity: 0.8,
         backgroundImage:
           'repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient(rgba(45, 175, 153, 0.33),rgb(17, 99, 41) )',

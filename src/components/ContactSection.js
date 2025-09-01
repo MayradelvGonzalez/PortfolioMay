@@ -14,7 +14,6 @@ const ContactSection = forwardRef((_, ref) => {
   const handleScroll = () => {
     if (titleRef.current) {
       const rect = titleRef.current.getBoundingClientRect();
-
       const isCurrentlyVisible = rect.top < window.innerHeight && rect.bottom >= 0;
       setIsVisible(isCurrentlyVisible);
     }
@@ -29,8 +28,13 @@ const ContactSection = forwardRef((_, ref) => {
 
   return (
     <section
-      className="py-20 bg-white"
-      style={{ backgroundColor: '#c3c7c4' }}
+      className="py-20"
+      style={{
+        backgroundColor: '#e5e5f7',
+        opacity: 0.8,
+        backgroundImage: 'radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px)',
+        backgroundSize: '10px 10px',
+      }}
       ref={ref}
     >
       <div className="container mx-auto px-4 max-w-4xl">
@@ -58,9 +62,9 @@ const ContactSection = forwardRef((_, ref) => {
               className="inline-block w-5 h-5 ml-2"
             />
           </a>
-          
         </div>
-           <div className="bg-green-50 rounded-xl p-8 shadow-lg text-center">
+        
+        <div className="bg-green-50 rounded-xl p-8 shadow-lg text-center">
           <p className="mb-4">¡Visita mi perfil en Linkedin!</p>
           <a
             href={urlLinkedin}
@@ -75,7 +79,6 @@ const ContactSection = forwardRef((_, ref) => {
               className="inline-block w-5 h-5 ml-2"
             />
           </a>
-          
         </div>
       </div>
     </section>
@@ -90,7 +93,6 @@ const Footer = () => (
     >
       Volver al Inicio🔼
     </button>
-
   </footer>
 );
 
