@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MayradelvGonzalez/New.git"
+    "url": "git+https://github.com/MayradelvGonzalez/PortfolioMay.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MayradelvGonzalez/New/issues"
+    "url": "https://github.com/MayradelvGonzalez/PortfolioMay/issues"
   },
   "homepage": "https://github.com/MayradelvGonzalez",
   "dependencies": {
