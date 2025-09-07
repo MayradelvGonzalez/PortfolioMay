@@ -89,7 +89,7 @@ const Footer = () => (
   <footer className="bg-gray-300 py-1 text-center text-gray-600">
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      className="bg-green-500 text-black font-semibold py-2 px-4 rounded-full shadow-md hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-800 animate__animated animate__fadeIn"
+      className="bg-green-500 text-black font-semibold py-2 px-4 shadow-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-green-800 animate__animated animate__fadeIn"
     >
       Volver al Inicio🔼
     </button>

@@ -74,7 +74,7 @@ const SkillsSection = () => {
         ref={ref}
         className={`text-xl font-semibold text-green-800 mb-6 flex items-center animate__animated ${inView ? animationClass : ''}`}
       >
-        <span className="w-4 h-4 bg-green-500 rounded-full mr-2"></span>
+        <span className="w-1 h-6 bg-blue-500 mr-2"></span>
         {children}
       </h3>
     );
