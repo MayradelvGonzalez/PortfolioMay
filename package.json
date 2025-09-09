@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/MayradelvGonzalez/PortfolioMay/issues"
   },
-  "homepage": "https://github.com/MayradelvGonzalez",
+  "homepage": ".",
   "dependencies": {
     "animate.css": "^4.1.1",
     "react": "^19.1.1",
