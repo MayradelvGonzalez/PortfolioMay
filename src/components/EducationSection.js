@@ -38,8 +38,13 @@ const EducationSection = () => {
       period: "Marzo 2010 - Marzo 2013"
     }
   ];
-
+ 
   const courses = [
+      {
+      titulo: "Security+ CompTIA en Español:¡Certifica tu Ciberseguridad",
+      institution: "Udemy",
+      periodo: "Septiembre 2025"
+    },
     {
       titulo: "Planificación y gestión de proyectos:PMBOK y Agile Scrum",
       institution: "Udemy",
@@ -82,6 +87,32 @@ const EducationSection = () => {
     }
   ];
 
+  const jobs = [
+      {
+      titulo: "Proyect Manager",
+      institution: "Independiente",
+      periodo: "Mayo 2025-Actualidad"
+    },
+    {
+      titulo: "Docente Educación Musical",
+      institution: "Escuela Primaria",
+      periodo: "2016-Actualidad"
+    },
+    {
+      titulo: "Tutora",
+      institution: "Curso Programación Backend Coderhouse",
+      periodo: "Septiembre 2023 - 2025"
+    },
+
+    {
+      titulo: "Mentora",
+      institution: "Programa Mujeres Digitales - Codo a Codo",
+      periodo: "2022"
+    },
+ 
+  ];
+
+
   const AnimatedTitle = ({ children, animationClass }) => {
     const { ref, inView } = useInView({
       threshold: 0.1,
@@ -116,6 +147,14 @@ const EducationSection = () => {
             <AnimatedTitle animationClass="animate__zoomIn">Cursos y Certificaciones</AnimatedTitle>
             <div className="space-y-6">
               {courses.map((item, index) => (
+                <AnimatedItem key={index} item={item} />
+              ))}
+            </div>
+          </div>
+           <div>
+            <AnimatedTitle animationClass="animate__zoomIn">Experiencia Laboral</AnimatedTitle>
+            <div className="space-y-6">
+              {jobs.map((item, index) => (
                 <AnimatedItem key={index} item={item} />
               ))}
             </div>
