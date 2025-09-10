@@ -201,7 +201,7 @@ const SkillsSection = () => {
         .skills-section {
             position: relative;
             overflow: hidden;
-            background: #636161ff;
+            background: linear-gradient(#f06d06, #fff);
             padding: 5rem 0;
             color: white;
         }
@@ -213,7 +213,7 @@ const SkillsSection = () => {
             width: 100%;
             height: 100%;
             z-index: 0;
-            background: #444444ff;
+            background: linear-gradient( #1edfa5ff, #3e4240ff,gray, #F0FDF4);
         }
 
         .animated-background > svg {
@@ -230,12 +230,12 @@ const SkillsSection = () => {
       <div className="animated-background">
         <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
             <defs>
-            <radialGradient id="Gradient1" cx="40%" cy="90%" fx="0.441602%" fy="30%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(80, 65, 80, 1)"></stop><stop offset="100%" stop-color="rgba(171, 167, 171, 0)"></stop></radialGradient>
-            <radialGradient id="Gradient2" cx="40%" cy="90%" fx="2.68147%" fy="30%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient>
-            <radialGradient id="Gradient3" cx="40%" cy="90%" fx="0.836536%" fy="30%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(33, 204, 70, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
+            <radialGradient id="Gradient1" cx="40%" cy="90%" fx="0.441602%" fy="30%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(80, 65, 80, 1)"></stop><stop offset="100%" stop-color="rgba(191, 164, 191, 0)"></stop></radialGradient>
+            <radialGradient id="Gradient2" cx="40%" cy="90%" fx="2.68147%" fy="30%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(189, 189, 124, 1)"></stop><stop offset="100%" stop-color="rgba(208, 208, 186, 0)"></stop></radialGradient>
+            <radialGradient id="Gradient3" cx="40%" cy="90%" fx="0.836536%" fy="30%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(96, 87, 227, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
             <radialGradient id="Gradient4" cx="40%" cy="90%" fx="4.56417%" fy="30%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient>
-            <radialGradient id="Gradient5" cx="40%" cy="90%" fx="2.65405%" fy="30%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(147, 147, 211, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
-            <radialGradient id="Gradient6" cx="40%" cy="90%" fx="0.981338%" fy="30%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(51, 97, 47, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
+            <radialGradient id="Gradient5" cx="40%" cy="90%" fx="2.65405%" fy="30%" r=".5"><animate attributeName="fx" dur="24.5s" values="5%;5%;5%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(246, 88, 225, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
+            <radialGradient id="Gradient6" cx="40%" cy="90%" fx="0.981338%" fy="30%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(11, 83, 4, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
             </defs>
             <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
             <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
