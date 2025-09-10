@@ -1,0 +1,27 @@
+/* SkillsSection.css */
+
+.skills-section {
+    position: relative;
+    overflow: hidden;
+    /* Puedes ajustar el padding o el color de fondo si lo necesitas */
+}
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Lo coloca detrás del contenido */
+    background: #000; /* Fondo oscuro para que las luces sean visibles */
+}
+
+.animated-background > svg {
+    width: 100%;
+    height: 100%;
+}
+
+.content-container {
+    position: relative;
+    z-index: 1; /* Lo coloca delante del fondo */
+}

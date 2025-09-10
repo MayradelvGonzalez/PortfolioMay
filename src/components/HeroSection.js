@@ -118,3 +118,4 @@ const HeroSection = ({ scrollToContact }) => {
 };
 
 export default HeroSection;
+
