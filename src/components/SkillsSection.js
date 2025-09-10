@@ -140,7 +140,7 @@ const SkillsSection = () => {
       <span
         ref={ref}
         key={index}
-        className={`bg-green-100 text-black px-4 py-2 rounded-full animate__animated ${inView ? animationClass : ''}`}
+        className={`bg-green-100 text-black px-4 py-2 rounded-full ${inView ? animationClass : ''}`}
       >
         {skill}
       </span>
@@ -156,7 +156,7 @@ const SkillsSection = () => {
       <span
         ref={ref}
         key={index}
-        className={`bg-green-50 border border-green-200 text-black px-4 py-2 rounded-full animate__animated ${inView ? animationClass : ''}`}
+        className={`bg-green-50 border border-green-200 text-black px-4 py-2 rounded-full ${inView ? animationClass : ''}`}
       >
         {skill}
       </span>
